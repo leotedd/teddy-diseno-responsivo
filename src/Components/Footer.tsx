@@ -5,7 +5,7 @@ const Footer: React.FC = () => (
     <div className="container text-center">
       <p>Síguenos en:</p>
       <a
-        href="https://facebook.com"
+        href="https://www.facebook.com/teddy.hernandez.904"
         target="_blank"
         rel="noopener noreferrer"
         className="text-white mx-2"
@@ -17,6 +17,7 @@ const Footer: React.FC = () => (
       <p className="mt-3">&copy; {new Date().getFullYear()} ElectroPro. Todos los derechos reservados.</p>
     </div>
   </footer>
+
 );
 
 export default Footer;
