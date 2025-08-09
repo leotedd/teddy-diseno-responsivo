@@ -1,71 +1,82 @@
-Servicios Eléctricos Teddy — Diseño Responsivo (React + TypeScript + Bootstrap)
-Aplicación web responsiva con temática eléctrica para Servicios Eléctricos Teddy, construida con React + TypeScript y Bootstrap 5.
+@'
+# Servicios Eléctricos Teddy — Diseño Responsivo (React + TypeScript + Bootstrap)
 
-Móvil: ≤ 600 px
+Aplicación web **responsiva** con temática eléctrica para **Servicios Eléctricos Teddy**.  
+Implementada con **React + TypeScript** y **Bootstrap 5**, cumpliendo los cortes:
 
-Tablet: 601–1024 px
-
-Escritorio: ≥ 1025 px
+- **Móvil:** ≤ **600 px**
+- **Tablet:** **601–1024 px**
+- **Escritorio:** ≥ **1025 px**
 
 Incluye:
+- **Header** con marca y navegación (**hamburguesa solo en ≤600 px**; oculta a partir de 601 px).
+- **Main** con título y párrafo descriptivo.
+- **Section** con **3 tarjetas** de servicios.
+- **Footer** con redes sociales.
+- Utilidades de Bootstrap + **media queries personalizadas**.
 
-Header con marca y navegación (hamburguesa solo en ≤600 px, oculta desde 601 px).
+---
 
-Main con título y párrafo descriptivo.
+## 🚀 Demo
 
-Section con 3 tarjetas de servicios.
+- **Netlify (producción):** https://capable-tartufo-8f2041.netlify.app/
+- **GitHub Pages:** _pendiente_ → https://leotedd.github.io/teddy-diseno-responsivo/
+- **Vercel:** _pendiente_ → https://teddy-diseno-responsivo.vercel.app
 
-Footer con redes sociales.
+---
 
-Utilidades de Bootstrap + media queries personalizadas.
+## 🧾 Datos del proyecto
 
-🚀 Demo
-Netlify (producción): https://capable-tartufo-8f2041.netlify.app/
+- **Autor:** Teddy (Ingeniería en Sistemas, 8.º semestre — UMG Guatemala)  
+- **Marca:** Servicios Eléctricos Teddy  
+- **Repositorio:** leotedd/teddy-diseno-responsivo  
+- **Contacto (reemplaza por tus datos reales):**  
+  - Teléfono (E.164): +502XXXXXXXX  
+  - Email: tu.correo@dominio.com  
+  - WhatsApp: https://wa.me/502XXXXXXXX
 
-GitHub Pages: pendiente → https://leotedd.github.io/teddy-diseno-responsivo/
+---
 
-🧾 Datos del proyecto
-Autor: Teddy (Ingeniería en Sistemas, 8.º semestre — UMG Guatemala)
+## 🧰 Tecnologías
 
-Marca: Servicios Eléctricos Teddy
+- **React 18 + TypeScript**
+- **Vite**
+- **Bootstrap 5** (layout, espaciado, tipografía)
+- **Font Awesome** (iconos sociales por CDN)
+- CSS con **media queries** personalizadas
 
-Repositorio: leotedd/teddy-diseno-responsivo
+> Requisitos: **Node.js 18+** y **npm 9+**.
 
-🧰 Tecnologías
-React 18 + TypeScript
+---
 
-Vite
+## ✨ Características clave
 
-Bootstrap 5
+- **Cortes responsivos exactos**:
+  - ≤600 px → layout móvil; **hamburguesa activa**.
+  - 601–1024 px → layout tablet; **menú expandido** (sin hamburguesa).
+  - ≥1025 px → layout escritorio; **menú expandido**.
+- **Grid** de servicios: 1/2/3 columnas según el ancho.
+- **Header** pegajoso (sticky) y accesible (aria-label, aria-expanded).
+- **Imagen de marca** y CTA de contacto (teléfono / correo / WhatsApp).
 
-Font Awesome (iconos, CDN)
+---
 
-CSS con media queries personalizadas
+## 📸 Evidencia de diseño responsivo
 
-Requisitos: Node.js 18+ y npm 9+.
+**Móvil (≤ 600 px)**  
+![Móvil 600](src/assets/Responsive%20600.png)
 
-✨ Características clave
-Cortes responsivos exactos:
+**Tablet (601–1024 px)**  
+![Tablet 601](src/assets/Responsive%20601.png)
 
-≤600 px → layout móvil; hamburguesa activa.
+**Escritorio (≥ 1025 px)**  
+![Escritorio 1024](src/assets/Responsive%201024.png)
 
-601–1024 px → layout tablet; menú expandido (sin hamburguesa).
+---
 
-≥1025 px → layout desktop; menú expandido.
+## ⚙️ Instalación y uso
 
-Grid de servicios: 1/2/3 columnas según el ancho.
-
-Header sticky y accesible (aria-label, aria-expanded).
-
-CTA de contacto (teléfono / correo / WhatsApp) en el header (≥601 px).
-
-📸 Evidencia de diseño responsivo
-Móvil (≤ 600 px)
-
-Tablet (601–1024 px)
-
-Escritorio (≥ 1025 px)
-
+```bash
 # 1) Clonar
 git clone https://github.com/leotedd/teddy-diseno-responsivo.git
 cd teddy-diseno-responsivo
@@ -79,83 +90,3 @@ npm run dev
 # 4) Build (producción)
 npm run build
 npm run preview   # (opcional) ver build local
-# 1) Clonar
-git clone https://github.com/leotedd/teddy-diseno-responsivo.git
-cd teddy-diseno-responsivo
-
-# 2) Instalar dependencias
-npm install
-
-# 3) Desarrollo
-npm run dev
-
-# 4) Build (producción)
-npm run build
-npm run preview   # (opcional) ver build local
-
-🧩 Componentes
-Header (src/Components/Header.tsx):
-Menú hamburguesa controlado con useState (solo en ≤600 px).
-
-Main (src/Components/Main.tsx):
-Título y descripción.
-
-Section (src/Components/Section.tsx):
-Tres tarjetas con imagen, título y texto.
-
-Footer (src/Components/Footer.tsx):
-
-.cards-grid {
-  display: grid;
-  gap: 1rem;
-  padding: 0 1rem;
-  grid-template-columns: 1fr; /* ≤600 */
-}
-
-@media (min-width: 601px) and (max-width: 1024px) {
-  .cards-grid { grid-template-columns: repeat(2, 1fr); }
-}
-
-@media (min-width: 1025px) {
-  .cards-grid { grid-template-columns: repeat(3, 1fr); }
-}
-/* ≤600px: .nav-links oculto, .menu-toggle visible */
-
-@media (min-width: 601px) and (max-width: 1024px) {
-  .nav-links { display: flex; }
-  .contact-cta { display: flex; }
-  .menu-toggle { display: none; }
-  .mobile-menu { display: none !important; }
-}
-
-@media (min-width: 1025px) {
-  .header-container { padding: .8rem 1rem; }
-  .nav-links { gap: 1.25rem; }
-}
-🌐 Despliegue
-Netlify: build automático desde GitHub (npm run build, carpeta dist).
-
-GitHub Pages (opcional):
-
-Instalar: npm i -D gh-pages
-
-vite.config.ts:
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
-
-export default defineConfig({
-  plugins: [react()],
-  base: '/teddy-diseno-responsivo/',
-})
-{
-  "scripts": {
-    "predeploy": "vite build",
-    "deploy": "gh-pages -d dist"
-  }
-}
-{
-  "scripts": {
-    "predeploy": "vite build",
-    "deploy": "gh-pages -d dist"
-  }
-}
